@@ -3,7 +3,8 @@
 // i love the band cors though
 // especially the violin girl :)
 function showNames(company_name){
-  url = 'https://www.linkedin.com/vsearch/pj?keywords='+company_name+'&sb=People%20who%20work%20at%'+company_name;
+  var page = 1;
+  var url = 'https://www.linkedin.com/vsearch/pj?keywords='+company_name+'&sb=People%20who%20work%20at%'+company_name+'&pageNum='+page;
 
   $.ajax({
     url: url,
