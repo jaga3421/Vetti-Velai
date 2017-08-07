@@ -1,0 +1,10 @@
+for(i=1000;i<1100;i++){
+  $.getJSON('api/user/search?q='+i,function(data){
+  name = data[0].first_name + data[0].last_name;
+  pic = data[0].disp_photo_url
+  result = '<div class="pic-wrapper"><div class="image"><img src="'+pic+'"></div><div class="name">'+name+'</div></div>'
+  $('.results-list').append(result)
+  })
+}
+
+$('.results-list').empty();
